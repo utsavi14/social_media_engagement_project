@@ -72,17 +72,17 @@ These features help understand what actually drives engagement.
 ### **Insight 1 — Hashtags**
 - Engagement stays low across all hashtag counts  
 - No strong pattern  
-➡ **Hashtags do NOT strongly affect engagement**
+ **Hashtags do NOT strongly affect engagement**
 
 ### **Insight 2 — Caption Length**
 - Very long captions underperform  
 - Short/medium captions slightly better  
-➡ **Caption length has weak impact**
+ **Caption length has weak impact**
 
 ### **Insight 3 — Timing (Freshness)**
 - Posts within **0–5 hours** get the highest likes  
 - Engagement drops sharply after **10 hours**  
-➡ **Timing is the strongest factor**
+ **Timing is the strongest factor**
 
 ---
 
