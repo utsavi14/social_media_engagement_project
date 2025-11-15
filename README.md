@@ -1,4 +1,4 @@
-# 📊 Social Media Engagement Analysis  
+# Social Media Engagement Analysis  
 ### Final Capstone Project – Customer Analytics  
 ### By: **Utsavi Sunil Patel**
 
@@ -69,17 +69,17 @@ These features help understand what actually drives engagement.
 
 ## 4. Exploratory Data Analysis (EDA)
 
-### 🔹 **Insight 1 — Hashtags**
+### **Insight 1 — Hashtags**
 - Engagement stays low across all hashtag counts  
 - No strong pattern  
 ➡ **Hashtags do NOT strongly affect engagement**
 
-### 🔹 **Insight 2 — Caption Length**
+### **Insight 2 — Caption Length**
 - Very long captions underperform  
 - Short/medium captions slightly better  
 ➡ **Caption length has weak impact**
 
-### 🔹 **Insight 3 — Timing (Freshness)**
+### **Insight 3 — Timing (Freshness)**
 - Posts within **0–5 hours** get the highest likes  
 - Engagement drops sharply after **10 hours**  
 ➡ **Timing is the strongest factor**
@@ -114,19 +114,19 @@ Using these insights, brands can increase engagement by **20–40%** simply by o
 
 Based on EDA and modeling:
 
-### ✔ Post during high-engagement hours  
+### Post during high-engagement hours  
 Fresh posts perform best.
 
-### ✔ Focus on growing followers  
+### Focus on growing followers  
 Largest driver of engagement.
 
-### ✔ Use 3–6 relevant hashtags  
+### Use 3–6 relevant hashtags  
 More hashtags do not guarantee higher engagement.
 
-### ✔ Keep captions simple  
+### Keep captions simple  
 Length has minimal effect.
 
-### ✔ Track posting patterns  
+### Track posting patterns  
 Monitor which hours and days perform best.
 
 ---
@@ -149,7 +149,7 @@ If more data is available, the analysis can be expanded by adding:
 |------|-------------|
 | `capstone.ipynb` | Full analysis + code |
 | `capstone.html` | HTML export of the notebook |
-| `Capstone_Instagram_Final_PPT_With_ThankYou.pptx` | Executive presentation |
+| `Capstone.pptx` | Executive presentation |
 | `instagram_reach.csv` | Dataset |
 | `README.md` | This file |
 
