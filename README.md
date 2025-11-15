@@ -60,7 +60,7 @@ Each row represents one Instagram post.
 ### **Engineered Features**
 - `caption_length`  
 - `hashtag_count`  
-- `engagement_rate` (likes ÷ followers)  
+- `engagement_rate` (likes / followers)  
 - `hours_since_posted`  
 
 These features help understand what actually drives engagement.
