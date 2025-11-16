@@ -7495,7 +7495,7 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Step-1-%E2%80%93-Business-Understanding"><strong>Step 1 – Business Understanding</strong><a class="anchor-link" href="#Step-1-%E2%80%93-Business-Understanding">¶</a></h1><p>The goal of this project is to understand what type of Instagram posts help a brand achieve higher engagement. Engagement includes likes, comments, and other interactions from followers.</p>
 <h3 id="Who-is-the-customer?"><strong>Who is the customer?</strong><a class="anchor-link" href="#Who-is-the-customer?">¶</a></h3><p>The customers are the brand’s <strong>Instagram followers</strong> — the people who view and interact with the posts.</p>
-<h3 id="What-problem-are-we-solving?"><strong>What problem are we solving?</strong><a class="anchor-link" href="#What-problem-are-we-solving?">¶</a></h3><p>The brand has inconsistent engagement:</p>
+<h3 id="What-problem-is-this-project-solving?"><strong>What problem is this project solving?</strong><a class="anchor-link" href="#What-problem-is-this-project-solving?">¶</a></h3><p>The brand has inconsistent engagement:</p>
 <ul>
 <li>Some posts perform very well</li>
 <li>Others receive very low engagement</li>
@@ -7516,7 +7516,7 @@ a.anchor-link {
 </ul>
 <h3 id="What-decisions-will-this-analysis-improve?"><strong>What decisions will this analysis improve?</strong><a class="anchor-link" href="#What-decisions-will-this-analysis-improve?">¶</a></h3><p>This project will help the brand make better decisions about:</p>
 <ul>
-<li>what type of posts to create (photo, video, carousel),</li>
+<li>what type of posts to create (photo, video),</li>
 <li>what time of day to post,</li>
 <li>how long captions should be,</li>
 <li>how many hashtags should be used.</li>
@@ -7539,41 +7539,39 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Step-2-%E2%80%93-Data-Understanding"><strong>Step 2 – Data Understanding</strong><a class="anchor-link" href="#Step-2-%E2%80%93-Data-Understanding">¶</a></h1><p>For this project, I used an open-source dataset called <strong>instagram_reach.csv</strong>, which contains 100 Instagram posts made by influencers or brands. Each row represents one post and includes important details about how the post performed.</p>
+<h1 id="Step-2-%E2%80%93-Data-Understanding"><strong>Step 2 – Data Understanding</strong><a class="anchor-link" href="#Step-2-%E2%80%93-Data-Understanding">¶</a></h1><p>For this project, I used an <strong>open-source Instagram engagement dataset</strong> called instagram_reach.csv.<br/>
+It contains <strong>100 Instagram posts</strong> made by influencers or brands. Each row represents one post and shows how it performed.</p>
 <h3 id="Dataset-Features"><strong>Dataset Features</strong><a class="anchor-link" href="#Dataset-Features">¶</a></h3><p>The dataset includes the following columns:</p>
 <ul>
-<li><strong>Caption</strong> – the text written under the post</li>
-<li><strong>Hashtags</strong> – hashtags used in the post</li>
-<li><strong>Likes</strong> – number of likes the post received</li>
-<li><strong>Followers</strong> – number of followers the account has</li>
+<li><strong>Caption</strong> – text written under the post</li>
+<li><strong>Hashtags</strong> – hashtags used</li>
+<li><strong>Likes</strong> – number of likes</li>
+<li><strong>Followers</strong> – follower count of the account</li>
 <li><strong>Time since posted</strong> – how long ago the post was uploaded</li>
 </ul>
-<p>These features help capture both the content of the post and how users interacted with it.</p>
-<h3 id="Why-this-dataset-is-suitable"><strong>Why this dataset is suitable</strong><a class="anchor-link" href="#Why-this-dataset-is-suitable">¶</a></h3><p>This dataset works well for the project because:</p>
-<ul>
-<li>It directly supports the goal of analyzing Instagram engagement.</li>
-<li>It includes key metrics such as likes and followers.</li>
-<li>It contains important content elements like captions and hashtags.</li>
-<li>It allows us to explore the effect of timing (freshness).</li>
-<li>It represents real-world customer interaction with a brand’s content.</li>
+<p>These fields help describe the content, audience size, and engagement of each post.</p>
+<h3 id="Why-this-dataset-is-suitable"><strong>Why this dataset is suitable</strong><a class="anchor-link" href="#Why-this-dataset-is-suitable">¶</a></h3><ul>
+<li>It is <strong>open-source and publicly available</strong>, making it easy to use for analysis.</li>
+<li>It directly supports the goal of understanding <strong>what drives Instagram engagement</strong>.</li>
+<li>It includes key metrics such as likes, followers, captions, and hashtags.</li>
+<li>It allows us to study how <strong>timing, content, and audience size</strong> influence engagement.</li>
+<li>It reflects real customer interaction with social media content.</li>
 </ul>
-<h3 id="Why-this-dataset-fits-customer-analytics"><strong>Why this dataset fits customer analytics</strong><a class="anchor-link" href="#Why-this-dataset-fits-customer-analytics">¶</a></h3><p>This dataset is relevant to customer analytics because:</p>
-<ul>
+<h3 id="Why-this-fits-customer-analytics"><strong>Why this fits customer analytics</strong><a class="anchor-link" href="#Why-this-fits-customer-analytics">¶</a></h3><ul>
 <li><strong>Likes</strong> show customer interest and satisfaction.</li>
 <li><strong>Followers</strong> represent the size of the customer base.</li>
-<li><strong>Captions/hashtags</strong> show what type of content followers respond to.</li>
-<li><strong>Time since posted</strong> reflects how user activity changes over time.</li>
+<li><strong>Captions/hashtags</strong> show what customers respond to.</li>
+<li><strong>Time since posted</strong> reflects customer activity patterns.</li>
 </ul>
-<p>In short, it helps us understand how customers behave when interacting with online content.</p>
-<h3 id="Dataset-limitations"><strong>Dataset limitations</strong><a class="anchor-link" href="#Dataset-limitations">¶</a></h3><p>While the dataset is useful, it has a few limitations:</p>
-<ul>
-<li>Some captions or hashtags are missing.</li>
-<li>“Time since posted” is stored as text (e.g., “2 hours”, “3 days”).</li>
-<li>No information about post type (photo, reel, video).</li>
-<li>Does not include comments or sentiment analysis.</li>
+<p>Together, these help us understand how customers behave on social platforms.</p>
+<h3 id="Dataset-Limitations"><strong>Dataset Limitations</strong><a class="anchor-link" href="#Dataset-Limitations">¶</a></h3><ul>
+<li>Some captions and hashtags are missing.</li>
+<li>“Time since posted” is stored as text (e.g., “2 hours”).</li>
+<li>No data about post type (photo, reel, video).</li>
+<li>Does not include comments or sentiment.</li>
 <li>Only includes posts — not stories, reels, or ads.</li>
 </ul>
-<p>These limitations may reduce how deeply we can analyze content, but the dataset is still strong enough for engagement prediction.</p>
+<p>Even with these limitations, the dataset is still strong enough for engagement prediction.</p>
 </div>
 </div>
 </div>
@@ -7582,7 +7580,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [137]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -7621,7 +7619,7 @@ memory usage: 6.4+ KB
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[137]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>Unnamed: 0           0
 S.No                 0
@@ -7641,7 +7639,7 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [138]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -7655,7 +7653,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[138]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7758,8 +7756,8 @@ dtype: int64</pre>
 <h1 id="Step-3-%E2%80%93-Data-Preparation-&amp;-Feature-Engineering"><strong>Step 3 – Data Preparation &amp; Feature Engineering</strong><a class="anchor-link" href="#Step-3-%E2%80%93-Data-Preparation-&amp;-Feature-Engineering">¶</a></h1><p>In this step, I cleaned the dataset and created new features so that it is ready for analysis and modeling. Good data preparation is important because the quality of the results depends heavily on the quality of the input data.</p>
 <h3 id="1.-Removed-unnecessary-columns"><strong>1. Removed unnecessary columns</strong><a class="anchor-link" href="#1.-Removed-unnecessary-columns">¶</a></h3><p>The dataset included two extra columns:</p>
 <ul>
-<li><code>Unnamed: 0</code></li>
-<li><code>S.No</code></li>
+<li>Unnamed: 0</li>
+<li>S.No</li>
 </ul>
 <p>These were index-like values and did not add any business or analytical value.<br/>
 So, I removed them to keep the dataset clean.</p>
@@ -7813,7 +7811,7 @@ This keeps the dataset complete and prevents errors in text processing.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [140]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Drop unnecessary columns</span>
@@ -7863,7 +7861,7 @@ This keeps the dataset complete and prevents errors in text processing.</p>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[140]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7994,7 +7992,7 @@ Hashtags do <strong>not</strong> strongly influence engagement in this dataset.<
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [142]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -8047,7 +8045,7 @@ Caption length has a <strong>weak</strong> relationship with engagement.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [144]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'caption_length'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'engagement_rate'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">)</span>
@@ -8097,7 +8095,7 @@ Caption length has a <strong>weak</strong> relationship with engagement.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [146]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'hours_since_posted'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Likes'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'orange'</span><span class="p">)</span>
@@ -8162,7 +8160,7 @@ The goal is not to get a perfect model, but to show how predictive modeling can 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [149]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Create a binary target for modeling</span>
@@ -8184,7 +8182,7 @@ The goal is not to get a perfect model, but to show how predictive modeling can 
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[77]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[149]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>engagement_label
 1    50
@@ -8199,7 +8197,7 @@ Name: count, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [150]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Select the features to use for prediction</span>
@@ -8217,7 +8215,7 @@ Name: count, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [79]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [151]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Split the data into training and testing </span>
@@ -8236,7 +8234,7 @@ Name: count, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [80]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [152]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Build a simple baseline model using Logistic Regression</span>
@@ -8284,7 +8282,7 @@ weighted avg       0.86      0.85      0.85        20
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [81]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [153]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Build an improved model using a Decision Tree</span>
@@ -8331,7 +8329,7 @@ weighted avg       0.78      0.70      0.71        20
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [82]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [154]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Plot feature importance to see which factors matter most</span>
@@ -8478,7 +8476,7 @@ By posting at the right time and focusing on follower growth, brands can signifi
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=46a49e1b-6d91-4cae-a243-89bfe388ada9">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b2a72bd9-5995-40d1-94c0-7b186f1dff1f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
